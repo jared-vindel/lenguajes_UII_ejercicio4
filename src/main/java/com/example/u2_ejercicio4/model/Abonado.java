@@ -36,7 +36,7 @@ public class Abonado {
   @JoinColumn(name="idtiporesidencia", referencedColumnName="idtiporesidencia")
   private TipoResidencia residencia;
 
-  @OneToMany(cascade=CascadeType.ALL)
+  @OneToMany(mappedBy="abonado", cascade=CascadeType.ALL)
   private List<Facturacion> facturas;
 
 }

@@ -30,6 +30,6 @@ public class TipoResidencia {
   @Column(name="preciokw")
   private double precioKw;
 
-  @OneToOne(mappedBy="residencia",cascade=CascadeType.ALL)
+  @OneToOne(mappedBy="residencia", cascade=CascadeType.ALL, orphanRemoval=true)
   private Abonado abonado;
 }
